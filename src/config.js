@@ -1,6 +1,8 @@
 import { resolve } from "node:path"
 import { config } from 'dotenv'
 export const NODE_ENV = process.env.NODE_ENV ?? 'development'
+console.log({ NODE_ENV });
+
 config({ path: resolve(`.env.${NODE_ENV}`) })
 
 export const PORT = parseInt(process.env.PORT ?? '9000')
